@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std ;
+void main() {
+int c = 10 , d ,                       e = 10; int y=700;  
+cout<<a ;
+cout<<b ;
+float flt = 10.20 ;
+float flt1 = 10.20 ;float f, g , h;
+char x = 'a',             b;                     char j='d';
+String abc = "World";    String hh = "ABdul" ,q              ;
+cout<<flt ;
+char xyz = 'a',i ;
+c = y;
+q=abc;
+c=100;
+q="Anas";
+b=x;
+b='T';
+}
