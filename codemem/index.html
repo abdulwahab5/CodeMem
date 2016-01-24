@@ -1,0 +1,90 @@
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <title>CodeMem</title>
+
+</head>
+<body>
+<div class="navbar navbar-inverse">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            
+        </a>
+    </div>
+    <div class="navbar-collapse collapse navbar-inverse-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a target="_blank" href="#">Developed by Team CodeMem</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4">
+             <img class="img-responsive" src="img/logo.png" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-lock"></span> Student Login
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal login-form" role="form" action="panel1.html">
+                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">
+                                Username</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control account" name="username" id="inputEmail3"
+                                       placeholder="Username" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">
+                                Password</label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control access-key" name="password" id="inputPassword3"
+                                       placeholder="Password"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-success btn-sm">
+                                    Login
+                                </button>
+                                <button type="reset" class="btn btn-default btn-sm">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+</body>
+
+<script type="application/javascript">
+    var url = "{{url()}}";
+</script>
+</html>

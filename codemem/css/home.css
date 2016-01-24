@@ -1,0 +1,41 @@
+body {
+    background: url('../img/my.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+}
+
+
+.panel-default {
+    opacity: 0.9;
+    margin-top:30px;
+}
+.form-group.last { margin-bottom:0px; }
+
+.navbar-nav li button {
+    margin-top: 8px;
+}
+
+.navbar-brand {
+    padding-top: 5px;
+}
+
+.navbar-brand img {
+    height: 40px
+}
+
+.navbar-header {
+    padding-left: 50px;
+}
+
+.navbar-right {
+    padding-right: 50px;
+}
+
+.modal-msg{
+    margin-bottom: 12px;
+    font-size: 18px;
+    background-color: #ccc;
+    padding: 7px;
+}

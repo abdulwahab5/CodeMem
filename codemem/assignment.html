@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<script language="javascript">
+          function addRow(tableID) {
+ 
+            var table = document.getElementById(tableID);
+ 
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+ 
+            var cell1 = row.insertCell(0);
+            var element1 = document.createElement("input");
+            element1.type = "checkbox";
+            element1.name="chkbox[]";
+            cell1.appendChild(element1);
+ 
+ 
+            var cell2 = row.insertCell(1);
+            var element2 = document.createElement("input");
+            element2.type = "text";
+            element2.name = "txtbox[]";
+            cell2.appendChild(element2);
+ 
+            var cell3 = row.insertCell(2);
+            var element3 = document.createElement("input");
+            element3.type = "text";
+            element3.name = "txtbox[]";
+            cell3.appendChild(element3);
+ 
+ 
+            var cell4 = row.insertCell(3);
+            var element4 = document.createElement("input");
+            element4.type = "text";
+            element4.name = "txtbox[]";
+            cell4.appendChild(element4);
+            var cell5 = row.insertCell(4);
+            var element5 = document.createElement("input");
+            element5.type = "text";
+            element5.name = "txtbox[]";
+            cell5.appendChild(element5);
+ 
+        }
+ 
+        function deleteRow(tableID) {
+            try {
+            var table = document.getElementById(tableID);
+            var rowCount = table.rows.length;
+ 
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if(null != chkbox && true == chkbox.checked) {
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+ 
+ 
+            }
+            }catch(e) {
+                alert(e);
+            }
+        }
+</script> 
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+
+    <title>Student Panel</title>
+</head>
+<body>
+<div class="header">
+    <h2>Student Panel</h2>
+</div>
+
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="logo">
+            <img class="img-responsive" src="img/logo.png"/>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="Panel1.html">Home</a></li>
+            <li><a href="assignments.html">Assignment</a></li>
+            <li><a href="viewgrades.html">View grades</a></li>
+            <li><a href="changepassword.html">Change Password</a></li>
+            <li><a href="index.html">Logout</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+ 	<div class="jumbotron">
+    <div class="container">   
+<div class="row">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <p ><strong>Code:</strong><br>
+    #include&lt;iostream&gt;</br>
+    using namespace std;<br>
+    int main()<br>
+    {<br>
+    	int x=5;<br>
+        float y;<br>
+        y=7.5;<br>
+        int z=x+y;<br>
+        return 0;<br>
+        }<br>
+        </p>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    
+    <input type="button" value="Add Row" onclick="addRow('dataTable')" />
+ 
+    <input type="button" value="Delete Row" onclick="deleteRow('dataTable')" />
+<div class="clearfix"></div>
+<table class="table table-stripped"id="dataTable" width="350px" border="1">
+        <tr><th>CHECK</th><th>LINE NO</th><th>TYPE</th><th>VARIABLE NAME</th><th>VALUE</th></tr>
+        <tr>
+            <td><input type="checkbox" name="chk"/></td>
+            <td> <input type="text" /> </td>
+            <td> <input  type="text" /> </td>
+            <td> <input type="text" /> </td>
+            <td> <input type="text" /> </td>
+        </tr>
+    </table>
+    
+</div>
+</div></div>
+</div></div>
+</body>
+</html>

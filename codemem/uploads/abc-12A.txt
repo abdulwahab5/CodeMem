@@ -7,7 +7,6 @@ int c = my, d ,                       e = 10; int y=700;  float flt1 = 10.20 ;
 char x = '9',             b;                     char j=90;float flt = 10.20 ;
 string abc = "World";    string hh = "ABdul" ,q              ;
 char xyz ,i ;
-abc="hello";
 float f,g,h;
 c = y;q=abc;
 c=100;

@@ -1,0 +1,4 @@
+int c = 50, d ,                       e = 10; int y=700;  
+c=(13)/5*e;
+c=e;
+bool x;
